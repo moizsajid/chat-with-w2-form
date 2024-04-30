@@ -1,0 +1,11 @@
+version: '3.11'
+
+services:
+    app:
+        build: ./
+        command: streamlit run app.py --server.port 8501
+        volumes:
+            - ./:/usr/src
+        ports:
+            - 8501:8501
+        image: streamlitapp:latest
